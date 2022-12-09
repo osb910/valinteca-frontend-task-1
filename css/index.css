@@ -18,7 +18,7 @@ body {
 @font-face {
   font-family: 'kharef';
   src: local('Abdoullah Ashgar EL-kharef'),
-    url('./assets/Abdoullah-Ashgar-EL-kharef-Regular.ttf') format('truetype');
+    url('../assets/Abdoullah-Ashgar-EL-kharef-Regular.ttf') format('truetype');
 }
 
 main {
@@ -65,11 +65,16 @@ button[type='submit'] {
   cursor: pointer;
 }
 
+a:where(:hover, :focus),
+button[type='submit']:where(:hover, :focus) {
+  background: linear-gradient(113deg, #3983df 14.81%, #869ff0 88.76%);
+}
+
 @media (min-width: 600px) {
   body {
     height: 100vh;
     padding: 3em 2em;
-    background: url('./assets/gradient-background.png');
+    background: url('../assets/gradient-background.png');
     background-repeat: no-repeat;
     background-size: 100%;
   }
@@ -105,9 +110,4 @@ button[type='submit'] {
   main > a {
     grid-area: interactive;
   }
-}
-
-a:where(:hover, :focus),
-button[type='submit']:where(:hover, :focus) {
-  background: linear-gradient(113deg, #3983df 14.81%, #869ff0 88.76%);
 }
